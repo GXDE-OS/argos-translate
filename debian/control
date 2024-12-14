@@ -1,0 +1,33 @@
+Source: argos-translate
+Section: unknown
+Priority: optional
+Maintainer: gfdgd_xi <3025613752@qq.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-sequence-python3,
+ python3-setuptools,
+ python3-all,
+ python3-pytest,
+ python3-sentencepiece,
+ python3-packaging
+#Testsuite: autopkgtest-pkg-python
+Standards-Version: 4.6.2
+Homepage: https://github.com/GXDE-OS/argos-translate
+
+Package: python3-argos-translate
+Architecture: all
+Depends:
+ ${python3:Depends},
+ ${misc:Depends},
+Suggests:
+ python-argos-translate-doc,
+Description: Argos Translate uses OpenNMT for translations and can be used as either a Python library, command-line, or GUI application. Argos Translate supports installing language model packages which are zip archives with a ".argosmodel" extension containing the data needed for translation. LibreTranslate is an API and web-app built on top of Argos Translate.
+
+Package: python-argos-translate-doc
+Section: doc
+Architecture: all
+Depends:
+ ${sphinxdoc:Depends},
+ ${misc:Depends},
+Description: Argos Translate uses OpenNMT for translations and can be used as either a Python library, command-line, or GUI application. Argos Translate supports installing language model packages which are zip archives with a ".argosmodel" extension containing the data needed for translation. LibreTranslate is an API and web-app built on top of Argos Translate.
